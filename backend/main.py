@@ -21,7 +21,8 @@ app = FastAPI()
 
 # --- ADD THESE LINES TO FIX THE ERROR ---
 origins = [
-    "http://localhost:3000", # The address of your frontend
+    "https://fault-tolerance-dashboard.vercel.app",  # your Vercel domain
+    "http://localhost:3000"  # for local testing
 ]
 
 app.add_middleware(
