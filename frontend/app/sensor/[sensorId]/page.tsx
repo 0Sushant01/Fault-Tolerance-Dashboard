@@ -9,7 +9,7 @@ interface TimeSeriesData {
 
 async function getSensorData(id: string): Promise<TimeSeriesData[]> {
   try {
-    const res = await fetch(`http://127.0.0.1:8000/api/bearing/${id}/data`, { cache: 'no-store' });
+    const res = await fetch(`https://fault-tolerance-dashboard.onrender.com/api/bearing/${id}/data`, { cache: 'no-store' });
     if (!res.ok) {
       throw new Error("Failed to fetch data");
     }

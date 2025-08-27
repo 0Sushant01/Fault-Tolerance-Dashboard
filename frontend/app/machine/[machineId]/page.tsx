@@ -21,7 +21,7 @@ interface MachineDetails {
 // This function fetches data for one specific machine
 async function getMachineDetails(id: string): Promise<MachineDetails | null> {
   try {
-    const res = await fetch(`http://127.0.0.1:8000/api/machine/${id}`, { cache: 'no-store' });
+    const res = await fetch(`https://fault-tolerance-dashboard.onrender.com/api/machine/${id}`, { cache: 'no-store' });
     if (!res.ok) {
       throw new Error("Failed to fetch data");
     }

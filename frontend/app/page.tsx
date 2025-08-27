@@ -25,7 +25,7 @@ export default function HomePage() {
       try {
         setIsLoading(true);
         setError(null);
-        const res = await fetch('http://127.0.0.1:8000/api/machines', { cache: 'no-store' });
+        const res = await fetch('https://fault-tolerance-dashboard.onrender.com/api/machines', { cache: 'no-store' });
         if (!res.ok) {
           throw new Error('Failed to fetch machine data');
         }
