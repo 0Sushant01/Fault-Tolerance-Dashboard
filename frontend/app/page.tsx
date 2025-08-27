@@ -4,7 +4,6 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import KpiCard from '../components/KpiCard';
 import StatusPieChart from '../components/StatusPieChart';
-import { color } from 'echarts';
 
 interface Machine {
   _id: string;
