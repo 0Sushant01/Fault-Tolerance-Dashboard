@@ -23,7 +23,8 @@ export default function StatusPieChart({ data }: ChartProps) {
   const option = {
     tooltip: {
       trigger: "item",
-      formatter: (p: unknown) => `${p.name}: ${p.value} (${p.percent}%)`
+      formatter: (p: { name: string; value: number; percent: number }) =>
+         `${p.name}: ${p.value} (${p.percent}%)`,
     },
     legend: {
       orient: "vertical",
